@@ -1,0 +1,19 @@
+{
+  "name": "jokebook",
+  "version": "1.0.0",
+  "description": "Jokebook API + Web UI (Express + PostgreSQL)",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "db:setup": "psql -h localhost -U postgres -d jokebook -f sql/schema.sql",
+    "db:seed": "psql -h localhost -U postgres -d jokebook -f sql/seed.sql"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "pg": "^8.16.3"
+  }
+}
+
